@@ -27,13 +27,12 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.boot:spring-boot-starter-actuator'
 	implementation 'org.springframework.boot:spring-boot-starter-integration'
-	// implementation 'org.springframework.boot:spring-boot-starter-integration:2.0.1.RELEASE'
 	implementation 'org.springframework.integration:spring-integration-aws:2.1.0.RELEASE' // 2.0.1.RELEASE
 	implementation 'org.springframework.cloud:spring-cloud-starter-aws'
 	implementation 'org.springframework.cloud:spring-cloud-starter-aws-messaging'
-	implementation 'com.amazonaws:aws-java-sdk-sqs:1.11.330'
-	runtimeOnly 'org.springframework.boot:spring-boot-devtools'
+	implementation 'org.elasticmq:elasticmq-server_2.11:0.14.6'
 
+	runtimeOnly 'org.springframework.boot:spring-boot-devtools'
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
 

@@ -11,6 +11,7 @@ import org.springframework.integration.annotation.ServiceActivator;
 public class MessageExecutor {
 
     @ServiceActivator(inputChannel = "inboundChannel")
+    // @SqsListener(value = "sqs-integration-test", deletionPolicy = SqsMessageDeletionPolicy.ON_SUCCESS)
     public void receiveMessage(final String message) throws Exception {
         log.info("Message received: {} ", message);
 
