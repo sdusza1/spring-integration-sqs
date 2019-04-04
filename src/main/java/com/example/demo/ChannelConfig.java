@@ -10,6 +10,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.integration.annotation.ServiceActivator;
 import org.springframework.integration.aws.inbound.SqsMessageDrivenChannelAdapter;
 import org.springframework.integration.aws.outbound.SqsMessageHandler;
+import org.springframework.integration.channel.DirectChannel;
 import org.springframework.integration.channel.QueueChannel;
 import org.springframework.integration.endpoint.MessageProducerSupport;
 import org.springframework.integration.scheduling.PollerMetadata;
@@ -21,13 +22,13 @@ import org.springframework.scheduling.support.PeriodicTrigger;
 public class ChannelConfig {
 
     public static final String SQS_QUEUE_NAME = "sqs-integration-test";
-    public static final int RETRY_NOTIFICATION_AFTER = 1; /* seconds */
+    public static final int RETRY_NOTIFICATION_AFTER = 5; /* seconds */
 
     private final AmazonSQSAsync amazonSqs;
 
     @Bean
-    public QueueChannel inboundChannel() {
-        return new QueueChannel();
+    public DirectChannel inboundChannel() {
+        return new DirectChannel();
     }
 
     @Bean
