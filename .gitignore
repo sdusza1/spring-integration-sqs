@@ -1,0 +1,57 @@
+*truststore.ts
+!ci/truststore.ts
+*.dsc
+*.tar.gz
+*_amd64*.*
+*.changes
+deb-build/
+*.*~
+.vagrant/
+.DS_Store
+build/
+.gradle/
+.classpath
+.project
+.settings/
+*.swp
+ubuntu-*.log
+
+### Grunt ###
+ui/node_modules
+node_modules
+
+*.class
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+/bin
+
+
+.idea/
+webapp/node_modules
+webapp/src/lib/components
+webapp/.tmp/
+webapp/dist/*
+webapp/reports/*
+node_modules
+npm-debug.log
+
+*.iml
+atlassian-ide-plugin.xml
+ui/customer/templates/pages/dataUse.*.json
+circlekid.ipr
+circlekid.iws
+/target/
+
+docker/local/*.eml
+out/local/*.txt
+node_modules/
+out/
