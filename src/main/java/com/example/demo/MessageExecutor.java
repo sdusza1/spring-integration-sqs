@@ -15,7 +15,7 @@ public class MessageExecutor {
     public void receiveMessage(final String message) throws Exception {
         log.info("Message received: {} ", message);
 
-        throw new Exception("Fake exception to trigger retry");
+        // throw new Exception("Fake exception to trigger retry");
     }
 
 }

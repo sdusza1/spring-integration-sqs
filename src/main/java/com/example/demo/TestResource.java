@@ -18,12 +18,11 @@ public class TestResource {
 
     gateway.sendMessage("TEST");
 
-    /*
-        for(int i=0; i < 15000; i++) {
-            // gateway.sendMessage("TEST "+ i);
-            queueMessagingTemplate.send("sqs-integration-test", MessageBuilder.withPayload("XXX: "+ i).build());
-        }
-    */
+    for(int i=0; i < 15000; i++) {
+        gateway.sendMessage("TEST "+ i);
+        // queueMessagingTemplate.send("sqs-integration-test", MessageBuilder.withPayload("XXX: "+ i).build());
+    }
+
 
     }
 

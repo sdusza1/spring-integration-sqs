@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class SqsClientConfig {
 
-/*
+    /*
     @Bean("amazonSQS")
     public AmazonSQSAsync testAmazonSQSClient(final SQSRestServer server) {
 
@@ -32,7 +32,7 @@ public class SqsClientConfig {
                 .start();
 
     }
-*/
+    */
 
     @Bean
     public QueueMessagingTemplate queueMessagingTemplate(final AmazonSQSAsync sqsClient) {

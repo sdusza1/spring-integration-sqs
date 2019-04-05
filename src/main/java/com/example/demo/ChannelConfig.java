@@ -54,6 +54,7 @@ public class ChannelConfig {
         SqsMessageDrivenChannelAdapter adapter = new SqsMessageDrivenChannelAdapter(amazonSqs, SQS_QUEUE_NAME);
         adapter.setOutputChannel(inboundChannel());
         adapter.setMessageDeletionPolicy(SqsMessageDeletionPolicy.ON_SUCCESS);
+        adapter.setMaxNumberOfMessages(10);
         adapter.setVisibilityTimeout(RETRY_NOTIFICATION_AFTER);
         return adapter;
     }
